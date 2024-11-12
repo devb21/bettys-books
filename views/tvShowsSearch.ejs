@@ -1,0 +1,17 @@
+<!-- views/tvShowsSearch.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search for TV Shows</title>
+</head>
+<body>
+    <h1>Search for TV Shows</h1>
+    <form action="/tv-shows/search" method="POST">
+        <input type="text" name="searchTerm" placeholder="Enter TV show name..." required>
+        <button type="submit">Search</button>
+    </form>
+    <a href="/">Back to Home</a>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!-- views/friendsBooks.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Friend's Books</title>
+</head>
+<body>
+    <h1>My Friend's Books</h1>
+    <ul>
+        <% books.forEach(book => { %>
+            <li>
+                <strong><%= book.name %></strong><br>
+                Price: <%= book.price %>
+            </li>
+        <% }) %>
+    </ul>
+    <a href="/">Back to Home</a> <!-- Link to go back to the main page -->
+</body>
+</html>

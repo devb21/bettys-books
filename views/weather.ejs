@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+    <title>Weather Information</title>
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+</head>
+<body>
+    <h1>Weather Information</h1>
+
+    <!-- Display weather information -->
+    <div>
+        <p><strong>Weather Info:</strong></p>
+        <div><%- weather %></div> <!-- Use <%- %> to render HTML without escaping -->
+    </div>
+
+    <!-- Form to input city name -->
+    <form action="/londonnow" method="get">
+        <label for="city">Enter city name:</label>
+        <input type="text" id="city" name="city" value="<%= city %>" required>
+        <button type="submit">Get Weather</button>
+    </form>
+
+    <p><a href="/">Back to Home</a></p>
+</body>
+</html>

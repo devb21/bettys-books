@@ -1,0 +1,22 @@
+<!-- views/tvShowsResults.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Shows Results</title>
+</head>
+<body>
+    <h1>TV Shows Results</h1>
+    <ul>
+        <% shows.forEach(show => { %>
+            <li>
+                <strong><%= show.show.name %></strong><br>
+                <img src="<%= show.show.image ? show.show.image.medium : 'No Image Available' %>" alt="<%= show.show.name %>"><br>
+                <a href="/shows/<%= show.show.id %>/episodes">View Episodes</a> <!-- Link to view episodes -->
+            </li>
+        <% }) %>
+    </ul>
+    <a href="/tv-shows">Back to Search</a>
+</body>
+</html>
